@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  react:
+    build: ./react
+    container_name: container_react
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ./react
+        target: /app
